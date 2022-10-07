@@ -1,0 +1,224 @@
+.page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 12px 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 20px 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 18px 0;
+  }
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.header-nav__list {
+  display: flex;
+  gap: 27px;
+}
+
+.header-nav__link {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: calc(20 / 16);
+  color: #fcfcfc;
+
+  &:hover {
+    color: $default-color;
+  }
+}
+
+.header-content__buttons {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.burger {
+  border: none;
+  background-color: transparent;
+
+  @media screen and (min-width: 1199px) {
+    display: none;
+  }
+}
+
+.header-content__button {
+  padding: 12px 34px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: calc(17 / 14);
+  color: #131313;
+  background-color: $default-color;
+  border: none;
+  border-radius: 10px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.burger__icon {
+  fill: #fcfcfc;
+}
+
+.title__accent {
+  text-transform: uppercase;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 500px;
+  padding-top: 110px;
+  background: $accent-color url(../images/header-hero/phone-left-balls@1x.png)
+      bottom left / 110px 34px no-repeat,
+    $accent-color url(../images/header-hero/phone-right-balls@1x.png) bottom
+      right / 130px 48px no-repeat;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background: $accent-color url(../images/header-hero/phone-left-balls@2x.png)
+        bottom left / 110px 34px no-repeat,
+      $accent-color url(../images/header-hero/phone-right-balls@2x.png) bottom
+        right / 130px 48px no-repeat;
+  }
+
+  @media screen and (min-width: 768px) {
+    background: $accent-color
+        url(../images/header-hero/tablet-left-balls@1x.png) bottom left / 110px
+        34px no-repeat,
+      $accent-color url(../images/header-hero/tablet-right-balls@1x.png) bottom
+        right / 182px 67px no-repeat;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background: $accent-color
+          url(../images/header-hero/tablet-left-balls@2x.png) bottom left /
+          110px 34px no-repeat,
+        $accent-color url(../images/header-hero/tablet-right-balls@2x.png)
+          bottom right / 182px 67px no-repeat;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    background: $accent-color url(../images/header-hero/desktop-balls@1x.png)
+      bottom center / 1200px 384px no-repeat;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background: $accent-color url(../images/header-hero/desktop-balls@2x.png)
+        bottom center / 1200px 384px no-repeat;
+    }
+  }
+}
+
+.title {
+  font-size: 26px;
+  line-height: calc(33 / 26);
+  letter-spacing: 0.04em;
+  color: #fcfcfc;
+  margin-bottom: 32px;
+}
+
+.hero__buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.hero__button {
+  display: block;
+  font-size: 8px;
+  font-weight: 600;
+  line-height: calc(10 / 8);
+  padding: 7px 11px;
+  border-radius: 8px;
+  background-color: transparent;
+  margin: 0;
+}
+
+.hero__button--bordered {
+  color: #131313;
+  border: 2px solid $default-color;
+}
+
+.hero__button--underlined {
+  color: $default-color;
+  text-decoration: underline;
+  border: 2px solid transparent;
+}
+
+// .ice-cream {
+//   position: absolute;
+//     left: 50%;
+//   bottom: 0;
+//     transform: translateX(-50%);
+//   z-index: 10;
+// }
+
+.left-balls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.right-balls {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.hero__image-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes animatename {
+  0% {
+    transform: rotate(0deg) scale(100%);
+  }
+  100% {
+    transform: rotate(-20deg) scale(110%);
+  }
+}
+
+@keyframes new {
+  0% {
+    transform: scale(0%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+
+.hero__img {
+  filter: drop-shadow(0px 0px 52px #ffffff);
+}
+
+.test {
+  position: absolute;
+  top: 49px;
+  left: 25px;
+
+  animation: new 1s ease-in-out infinite alternate,
+    animatename 1s ease-in-out infinite alternate 1s;
+}

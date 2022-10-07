@@ -1,4 +1,3 @@
-Hero Header
 <!-- У шапці знаходиться лого, меню навігації та кнопка.
 
 Лого на макеті відображено у форматі png.
@@ -12,3 +11,84 @@ Hero Header
 Кнопки “Products” та “How it's made”, розміщені під заголовком,  є якірними посиланнями на відповідні розділи.
 
 Картинки на Hero спозиціонувати абсолютно. Додатково їм можна зробити анімовану появу під час завантаження сторінки. -->
+
+<header class="page-header">
+  <div class="container">
+    <div class="header-content">
+      <picture class="logo">
+        <source
+          srcset="
+            ./images/header-hero/desktop-logo@1x.png 1x,
+            ./images/header-hero/desktop-logo@2x.png 2x
+          "
+          media="(min-width: 1200px)"
+          width="60"
+        />
+        <source
+          srcset="
+            ./images/header-hero/tablet-logo@1x.png 1x,
+            ./images/header-hero/tablet-logo@2x.png 2x
+          "
+          media="(min-width: 768px)"
+          width="48"
+        />
+        <img
+          class="product__image"
+          srcset="
+            ./images/header-hero/phone-logo@1x.png 1x,
+            ./images/header-hero/phone-logo@2x.png 2x
+          "
+          src="./images/header-hero/phone-logo@1x.png"
+          alt="Логотип сайту"
+          width="40"
+        />
+      </picture>
+      <nav class="header-nav">
+        <ul class="header-nav__list">
+          <li class="header-nav__item">
+            <a href="#" class="header-nav__link">Home</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#" class="header-nav__link">How it’s made?</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#" class="header-nav__link">Our products</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#" class="header-nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-content__buttons">
+        <button class="burger">
+          <svg class="burger__icon" width="32" height="32">
+            <use href="./images/header-hero/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
+        <button class="header-content__button">Buy now</button>
+      </div>
+    </div>
+  </div>
+</header>
+<section class="hero">
+  <div class="container">
+    <h1 class="title">
+      ice cream made with <span class="title__accent">passion</span>
+    </h1>
+    <div class="hero__buttons">
+      <a href="#" class="hero__button hero__button--bordered">Products</a>
+      <a href="#" class="hero__button hero__button--underlined">
+        How it’s made?
+      </a>
+    </div>
+    <div class="hero__image-wrapper">
+      <img
+        src="./images/header-hero/мороженко 1.png"
+        alt=""
+        class="hero__img"
+        width="157"
+      />
+      <img class="test" src="./images/header-hero/Frame.svg" alt="" />
+    </div>
+  </div>
+</section>
