@@ -1,0 +1,38 @@
+body {
+  font-family: $main-font-family;
+  font-size: 1.4rem;
+  line-height: 1.76;
+  letter-spacing: $default-letter-spacing;
+}
+
+.title-label {
+  font-weight: $bold-text;
+  font-size: 1.8rem;
+  line-height: 1.23;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    font-size: 2.2rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 3rem;
+  }
+}
+
+.title {
+  font-family: $title-font-family;
+  font-size: 3rem;
+  line-height: 1.27;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    font-size: 3.4rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 3.6rem;
+  }
+}
