@@ -1,0 +1,47 @@
+.btn {
+  display: inline-block;
+  padding: 12px 34px;
+
+  font-family: $main-font-family;
+  font-weight: $semibold-text;
+  font-size: 1.4rem;
+  line-height: 1.29;
+
+  color: $default-text-color;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.btn--border {
+  border: 2px solid $primary-color;
+
+  &:hover{
+    border-color: $hover-color;
+  }
+
+  &:focus {
+    color: $light-text-color;
+    border-color: $hover-color;
+  }
+
+  &:disabled {
+    border-color: $disabled-color;
+  }
+}
+
+.btn--accent {
+  background-color: $primary-color;
+
+  &:hover{
+    background-color: $hover-color;
+  }
+
+  &:focus {
+    color: $light-text-color;
+    background-color: $hover-color;
+  }
+
+  &:disabled {
+    background-color: $disabled-color;
+  }
+}

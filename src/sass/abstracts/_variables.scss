@@ -2,7 +2,39 @@ $desktop-width: 1200px;
 $tablet-width: 768px;
 $phone-width: 480px;
 
+//COLORS
 $accent-color: #84A278;
-$default-color: #F8D24E;
+$primary-color: #F8D24E;
 $hover-color: #0A8817;
 $disabled-color: #ABABAB;
+$light-text-color: #FCFCFC;
+$default-text-color: #131313;
+
+//section products
+$ice-cream-color: #AEC6A5;
+$ice-coffee-color:#EFD478;
+$milkshakes-color: #D6936D;
+
+//section contacts
+$address-text-color: #D6936D;
+
+//footer
+$copyright-text-color: #7A7A7A;
+
+//FONTS
+//font-size
+$default-font-size: 10px;
+//family
+$main-font-family: 'Montserrat', sans-serif;
+$title-font-family: 'Seymour One', sans-serif;
+
+//weight
+$regular-text: 400;
+$medium-text: 500;
+$semibold-text: 600;
+$bold-text: 700;
+$extrabold-text: 800;
+$black-text: 900;
+
+//letter-spacing
+$default-letter-spacing: 0.04em;

@@ -1,9 +1,9 @@
 @import './common';
 
+@import './abstracts/variables';
 @import './base/reset';
 @import './base/visually-hidden';
 
-@import './abstracts/variables';
 @import './abstracts/mixins';
 @import './abstracts/placeholders';
 
@@ -11,9 +11,6 @@
 @import './base/utils';
 
 @import './components/buttons';
-@import './components/items';
-@import './components/links';
-@import './components/lists';
 
 @import './layout/hero-header';
 @import './layout/products';
