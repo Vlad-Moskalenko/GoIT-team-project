@@ -1,6 +1,6 @@
 .btn {
   display: inline-block;
-  padding: 12px 34px;
+  padding: 8px 30px;
 
   font-family: $main-font-family;
   font-weight: $semibold-text;
@@ -8,12 +8,13 @@
   line-height: 1.29;
 
   color: $default-text-color;
+  border: 2px solid transparent;
   border-radius: 1rem;
   cursor: pointer;
 }
 
 .btn--border {
-  border: 2px solid $primary-color;
+  border-color: $primary-color;
 
   &:hover{
     border-color: $hover-color;
@@ -29,7 +30,7 @@
   }
 }
 
-.btn--accent {
+.btn--primary {
   background-color: $primary-color;
 
   &:hover{
