@@ -72,23 +72,75 @@
 </header>
 <section class="hero">
   <div class="container">
-    <h1 class="title">
-      ice cream made with <span class="title__accent">passion</span>
-    </h1>
-    <div class="hero__buttons">
-      <a href="#" class="hero__button hero__button--bordered">Products</a>
-      <a href="#" class="hero__button hero__button--underlined">
-        How it’s made?
-      </a>
-    </div>
-    <div class="hero__image-wrapper">
-      <img
-        src="./images/header-hero/мороженко 1.png"
-        alt=""
-        class="hero__img"
-        width="157"
-      />
-      <img class="test" src="./images/header-hero/Frame.svg" alt="" />
+    <div class="hero__content">
+      <h1 class="title">
+        ice cream made with <span class="title__accent">passion</span>
+      </h1>
+      <div class="hero__buttons">
+        <a href="#" class="hero__button hero__button--bordered">Products</a>
+        <a href="#" class="hero__button hero__button--underlined">
+          How it’s made?
+        </a>
+      </div>
+      <div class="hero__description">
+        <picture class="hero__plate">
+          <source
+            srcset="
+              ./images/header-hero/tablet-plate@1x.png 1x,
+              ./images/header-hero/tablet-plate@2x.png 2x
+            "
+            media="(min-width: 1200px)"
+          />
+          <img
+            srcset="
+              ./images/header-hero/tablet-plate@1x.png 1x,
+              ./images/header-hero/tablet-plate@2x.png 2x
+            "
+            src="./images/header-hero/tablet-plate@1x.png"
+            alt="Тарілка з морозивом"
+            width="152"
+          />
+        </picture>
+        <p class="hero__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et
+        </p>
+      </div>
+      <div class="hero__image-wrapper">
+        <picture class="hero__img">
+          <source
+            srcset="
+              ./images/header-hero/desktop-ice-cream@1x.png 1x,
+              ./images/header-hero/desktop-ice-cream@2x.png 2x
+            "
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="
+              ./images/header-hero/tablet-ice-cream@1x.png 1x,
+              ./images/header-hero/tablet-ice-cream@2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <img
+            srcset="
+              ./images/header-hero/phone-ice-cream@1x.png 1x,
+              ./images/header-hero/phone-ice-cream@2x.png 2x
+            "
+            src="./images/header-hero/phone-ice-cream@1x.png"
+            alt="Логотип сайту"
+          />
+        </picture>
+        <svg class="smile-one">
+          <use href="./images/header-hero/icons.svg#icon-smile1"></use>
+        </svg>
+        <svg class="smile-two">
+          <use href="./images/header-hero/icons.svg#icon-smile2"></use>
+        </svg>
+        <svg class="smile-three">
+          <use href="./images/header-hero/icons.svg#icon-smile3"></use>
+        </svg>
+      </div>
     </div>
   </div>
 </section>
