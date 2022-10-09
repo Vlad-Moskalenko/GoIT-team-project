@@ -1,0 +1,51 @@
+@keyframes ice-cream-shadow-spawn {
+  0% {
+    filter: drop-shadow(0px 0px 0px #fcfcfc);
+  }
+  100% {
+    filter: drop-shadow(0px 0px 40px #fcfcfc);
+  }
+}
+
+@keyframes ice-cream-shadow-flash {
+  0% {
+    filter: drop-shadow(0px 0px 40px #fcfcfc);
+  }
+  100% {
+    filter: drop-shadow(0px 0px 10px #fcfcfc);
+  }
+}
+
+@keyframes ice-cream-rotate {
+  0% {
+    transform: scale(0%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(100%) rotate(2turn);
+    opacity: 1;
+  }
+}
+
+@keyframes eye-close {
+  0% {
+    transform: scaleY(100%);
+  }
+
+  48% {
+    transform: scaleY(100%);
+  }
+
+  50% {
+    transform: scaleY(0%);
+  }
+
+  52% {
+    transform: scaleY(100%);
+  }
+
+  100% {
+    transform: scaleY(100%);
+  }
+}
