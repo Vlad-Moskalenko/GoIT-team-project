@@ -60,7 +60,7 @@
   }
 }
 
-.buy {
+.buy__button {
   display: flex;
   align-items: center;
   gap: 7px;
@@ -88,7 +88,7 @@
   }
 }
 
-.buy__icon {
+.buy__button__icon {
   fill: currentColor;
 }
 
@@ -416,7 +416,7 @@
 
 // MOBILE NAV
 
-.mobile-nav {
+.mobile-menu {
   position: fixed;
   top: 0;
   left: 0;
@@ -433,7 +433,7 @@
   }
 }
 
-.mobile-nav__header {
+.mobile-menu__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -455,7 +455,7 @@
   fill: $light-text-color;
 }
 
-.mobile-nav__nav {
+.mobile-nav {
   text-align: center;
   margin-bottom: 111px;
 }
@@ -484,7 +484,7 @@
   }
 }
 
-.nav-buy {
+.menu-button {
   display: flex;
   align-items: center;
   gap: 7px;

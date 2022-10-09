@@ -1,17 +1,3 @@
-<!-- У шапці знаходиться лого, меню навігації та кнопка.
-
-Лого на макеті відображено у форматі png.
-
-Меню навігації  на мобільній та планшетній версії відображається як бокова панель, що виїжджає. Мобільне меню фіксоване, висота відповідає висоті в'юпорту. Меню реалізовано якірними посиланнями, які ведуть до відповідних розділів макета.
-
-Кнопка “Buy now” відкриває модальне вікно з формою замовлення (реалізація модального вікна не є обов'язковим завданням).
-
-Текст “Ice cream made with passion” є заголовком сторінки.
-
-Кнопки “Products” та “How it's made”, розміщені під заголовком,  є якірними посиланнями на відповідні розділи.
-
-Картинки на Hero спозиціонувати абсолютно. Додатково їм можна зробити анімовану появу під час завантаження сторінки. -->
-
 <header class="page-header">
   <div class="container">
     <div class="header-content">
@@ -49,6 +35,7 @@
       <div class="header-content__buttons">
         <button
           class="burger js-open-menu"
+          type="button"
           aria-expanded="false"
           aria-controls="mobile-menu"
         >
@@ -56,9 +43,9 @@
             <use href="./images/header-hero/icons.svg#icon-burger"></use>
           </svg>
         </button>
-        <button class="btn buy">
-          <span class="buy__text">Buy now</span>
-          <svg class="buy__icon" width="12" height="12">
+        <button class="btn buy__button" type="button">
+          <span class="buy__button__text">Buy now</span>
+          <svg class="buy__button__icon" width="12" height="12">
             <use href="./images/header-hero/icons.svg#icon-button-arrow"></use>
           </svg>
         </button>
@@ -137,9 +124,9 @@
     </div>
   </div>
 </section>
-<div class="mobile-nav js-menu-container" id="mobile-menu">
+<div class="mobile-menu js-menu-container" id="mobile-menu">
   <div class="container">
-    <div class="mobile-nav__header">
+    <div class="mobile-menu__header">
       <a class="logo" href="#">
         <img
           srcset="
@@ -153,13 +140,13 @@
           alt="Логотип сайту"
         />
       </a>
-      <button class="cross js-close-menu">
+      <button class="cross js-close-menu" type="button">
         <svg class="cross__icon" width="32" height="32">
           <use href="./images/header-hero/icons.svg#icon-cross"></use>
         </svg>
       </button>
     </div>
-    <nav class="mobile-nav__nav">
+    <nav class="mobile-nav">
       <ul class="mobile-nav__list">
         <li class="mobile-nav__item">
           <a href="#" class="mobile-nav__link">Home</a>
@@ -175,9 +162,9 @@
         </li>
       </ul>
     </nav>
-    <button class="btn nav-buy">
-      <span class="buy__text">Buy now</span>
-      <svg class="buy__icon" width="12" height="12">
+    <button class="btn menu-button" type="button">
+      <span class="menu-button__text">Buy now</span>
+      <svg class="menu-button__icon" width="12" height="12">
         <use href="./images/header-hero/icons.svg#icon-button-arrow"></use>
       </svg>
     </button>
