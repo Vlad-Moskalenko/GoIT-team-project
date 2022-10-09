@@ -28,6 +28,28 @@
   }
 }
 
+@keyframes eye-close {
+  0% {
+    transform: scaleY(100%);
+  }
+
+  48% {
+    transform: scaleY(100%);
+  }
+
+  50% {
+    transform: scaleY(0%);
+  }
+
+  52% {
+    transform: scaleY(100%);
+  }
+
+  100% {
+    transform: scaleY(100%);
+  }
+}
+
 .page-header {
   position: absolute;
   top: 0;
@@ -327,6 +349,7 @@
 
 .hero__image-wrapper {
   position: absolute;
+  min-width: 157px;
 
   @media screen and (max-width: 767px) {
     bottom: 0;
@@ -349,81 +372,44 @@
   animation: new 1s ease-in-out forwards 1s;
 }
 
-.smile-one {
+.smiles {
   position: absolute;
-  animation: animatename 1s ease-in-out infinite alternate 1s;
-
-  @media screen and (max-width: 767px) {
-    width: 64px;
-    height: 64px;
-    top: 50px;
-    left: 25px;
-  }
+  top: 0;
+  left: 25px;
 
   @media screen and (min-width: $tablet-width) {
-    width: 100px;
-    height: 95px;
-    top: 77px;
-    left: 40px;
+    top: 4px;
+    left: 45px;
+    width: 214px;
+    height: 240px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    width: 179px;
-    height: 163px;
-    top: 132px;
-    left: 72px;
-  }
-}
-
-.smile-two {
-  position: absolute;
-  animation: animatename 1s ease-in-out infinite alternate 1s;
-
-  @media screen and (max-width: 767px) {
-    width: 80px;
-    height: 78px;
-    top: 5px;
-    right: 6px;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 126px;
-    height: 121px;
-    top: 7px;
-    right: 17px;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    width: 227px;
-    height: 207px;
     top: 12px;
-    right: 13px;
+    left: 72px;
+    width: 384px;
+    height: 411px;
   }
 }
 
-.smile-three {
+.eye {
   position: absolute;
-  animation: animatename 1s ease-in-out infinite alternate 1s;
-
-  @media screen and (max-width: 767px) {
-    width: 83px;
-    height: 83px;
-    bottom: 50px;
-    right: 0;
-  }
+  top: 24px;
+  left: 94px;
+  animation: eye-close 5s ease-in-out alternate infinite;
 
   @media screen and (min-width: $tablet-width) {
-    width: 131px;
-    height: 138px;
-    bottom: 77px;
-    right: 3px;
+    top: 40px;
+    left: 155px;
+    width: 34px;
+    height: 38px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    width: 234px;
-    height: 220px;
-    bottom: 137px;
-    right: -8px;
+    top: 68px;
+    left: 268px;
+    width: 62px;
+    height: 66px;
   }
 }
 
@@ -472,5 +458,101 @@
   @media screen and (min-width: 1200px) {
     font-size: 4.6rem;
     line-height: calc(56 / 46);
+  }
+}
+
+// MOBILE NAV
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #85a279;
+
+  z-index: 20;
+  transform: translateX(100%);
+  transition: transform 0.2s ease-in-out;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+}
+
+.mobile-nav__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 72px;
+  padding: 12px 0;
+
+  @media screen and (min-width: $tablet-width) {
+    padding: 20px 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 18px 0;
+  }
+}
+
+.cross {
+  border: none;
+  background-color: transparent;
+  fill: $light-text-color;
+}
+
+.mobile-nav__nav {
+  text-align: center;
+  margin-bottom: 111px;
+}
+
+.mobile-nav__item {
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.mobile-nav__link {
+  font-size: 3.2rem;
+  font-weight: $bold-text;
+  color: $light-text-color;
+  line-height: calc(39 / 32);
+
+  &:hover,
+  &:focus {
+    color: $default-text-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 4.8rem;
+    line-height: calc(59 / 48);
+  }
+}
+
+.nav-buy {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  line-height: calc(17 / 14);
+  background-color: $primary-color;
+  border: none;
+  margin: 0 auto;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+
+  &:focus {
+    background-color: $hover-color;
+    color: $light-text-color;
+  }
+
+  &:disabled {
+    background-color: $disabled-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }

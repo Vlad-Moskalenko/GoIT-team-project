@@ -47,7 +47,11 @@
         </ul>
       </nav>
       <div class="header-content__buttons">
-        <button class="burger">
+        <button
+          class="burger js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
           <svg class="burger__icon" width="32" height="32">
             <use href="./images/header-hero/icons.svg#icon-burger"></use>
           </svg>
@@ -123,16 +127,59 @@
           src="./images/header-hero/tablet-plate@1x.png"
           alt="Морозиво"
         />
-        <svg class="smile-one">
-          <use href="./images/header-hero/icons.svg#icon-smile1"></use>
+        <svg class="smiles" width="135" height="153">
+          <use href="./images/header-hero/icons.svg#icon-smiles"></use>
         </svg>
-        <svg class="smile-two">
-          <use href="./images/header-hero/icons.svg#icon-smile2"></use>
-        </svg>
-        <svg class="smile-three">
-          <use href="./images/header-hero/icons.svg#icon-smile3"></use>
+        <svg class="eye" width="22" height="25">
+          <use href="./images/header-hero/icons.svg#icon-eye"></use>
         </svg>
       </div>
     </div>
   </div>
 </section>
+<div class="mobile-nav js-menu-container" id="mobile-menu">
+  <div class="container">
+    <div class="mobile-nav__header">
+      <a class="logo" href="#">
+        <img
+          srcset="
+            ./images/header-hero/phone-logo@1x.png  40w,
+            ./images/header-hero/phone-logo@2x.png  80w,
+            ./images/header-hero/tablet-logo@1x.png 48w,
+            ./images/header-hero/tablet-logo@2x.png 96w
+          "
+          sizes="(min-width: 768px) 48px, 40px"
+          src="./images/header-hero/phone-logo@1x.png"
+          alt="Логотип сайту"
+        />
+      </a>
+      <button class="cross js-close-menu">
+        <svg class="cross__icon" width="32" height="32">
+          <use href="./images/header-hero/icons.svg#icon-cross"></use>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-nav__nav">
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item">
+          <a href="#" class="mobile-nav__link">Home</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#" class="mobile-nav__link">How it’s made?</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#" class="mobile-nav__link">Our products</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#" class="mobile-nav__link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <button class="btn nav-buy">
+      <span class="buy__text">Buy now</span>
+      <svg class="buy__icon" width="12" height="12">
+        <use href="./images/header-hero/icons.svg#icon-button-arrow"></use>
+      </svg>
+    </button>
+  </div>
+</div>
