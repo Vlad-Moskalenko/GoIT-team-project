@@ -7,14 +7,14 @@
   }
 }
 
-// @keyframes new {
-//   0% {
-//     transform: scale(0%);
-//   }
-//   100% {
-//     transform: scale(100%);
-//   }
-// }
+@keyframes new {
+  0% {
+    filter: drop-shadow(0px 0px 0px #fcfcfc);
+  }
+  100% {
+    filter: drop-shadow(0px 0px 40px #fcfcfc);
+  }
+}
 
 @keyframes ice-cream {
   0% {
@@ -68,7 +68,8 @@
   line-height: calc(20 / 16);
   color: $light-text-color;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $primary-color;
   }
 }
@@ -88,18 +89,34 @@
   }
 }
 
-.header-content__button {
-  padding: 12px 34px;
-  font-size: 1.4rem;
-  font-weight: $semibold-text;
+.buy {
+  display: flex;
+  align-items: center;
+  gap: 7px;
   line-height: calc(17 / 14);
-  color: $default-text-color;
   background-color: $primary-color;
   border: none;
-  border-radius: 10px;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+
+  &:focus {
+    background-color: $hover-color;
+    color: $light-text-color;
+  }
+
+  &:disabled {
+    background-color: $disabled-color;
+  }
+
   @media screen and (max-width: 767px) {
     display: none;
   }
+}
+
+.buy__icon {
+  fill: currentColor;
 }
 
 .burger__icon {
@@ -108,9 +125,6 @@
 
 .hero {
   position: relative;
-  // height: 100vh;
-  // min-height: 500px;
-
   background: $accent-color url(../images/header-hero/phone-left-balls@1x.png)
       bottom left / 110px 34px no-repeat,
     $accent-color url(../images/header-hero/phone-right-balls@1x.png) bottom
@@ -126,8 +140,6 @@
   }
 
   @media screen and (min-width: $tablet-width) {
-    // padding-top: 104px;
-    // min-height: 415px;
     background: $accent-color
         url(../images/header-hero/tablet-left-balls@1x.png) bottom left / 110px
         34px no-repeat,
@@ -146,8 +158,6 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    // padding-top: 118px;
-    // min-height: 664px;
     background: $accent-color url(../images/header-hero/desktop-balls@1x.png)
       bottom center / $desktop-width 384px no-repeat;
 
@@ -164,7 +174,6 @@
   position: relative;
   padding-top: 110px;
   padding-bottom: 239px;
-  // height: 100%;
 
   @media screen and (min-width: 768px) {
     padding-top: 104px;
@@ -248,12 +257,29 @@
 .hero__button--bordered {
   color: $default-text-color;
   border: 2px solid $primary-color;
+
+  &:hover {
+    border-color: $hover-color;
+  }
+
+  &:focus {
+    border-color: $hover-color;
+    color: $light-text-color;
+  }
 }
 
 .hero__button--underlined {
   color: $primary-color;
   text-decoration: underline;
   border: 2px solid transparent;
+
+  &:hover {
+    color: $hover-color;
+  }
+
+  &:focus {
+    color: $light-text-color;
+  }
 }
 
 .hero__description {
@@ -271,15 +297,36 @@
 }
 
 .hero__text {
+  position: relative;
   max-width: 151px;
   font-size: 1.2rem;
   line-height: 1.4;
   color: $light-text-color;
 }
 
+.hero__arrow {
+  fill: currentColor;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 14px);
+
+  &:hover {
+    transform-origin: left center;
+    transform: scaleX(120%);
+  }
+
+  &:focus {
+    transform-origin: left center;
+    transform: scale(120%);
+  }
+
+  @media screen and (min-width: 1200px) {
+    top: calc(100% + 25px);
+  }
+}
+
 .hero__image-wrapper {
   position: absolute;
-  animation: ice-cream 1s ease-in-out;
 
   @media screen and (max-width: 767px) {
     bottom: 0;
@@ -288,6 +335,7 @@
   }
 
   @media screen and (min-width: $tablet-width) {
+    animation: ice-cream 1s ease-in-out;
     bottom: 0;
     right: 61px;
   }
@@ -298,12 +346,11 @@
 }
 
 .hero__img {
-  filter: drop-shadow(0px 0px 40px #fcfcfc);
+  animation: new 1s ease-in-out forwards 1s;
 }
 
 .smile-one {
   position: absolute;
-
   animation: animatename 1s ease-in-out infinite alternate 1s;
 
   @media screen and (max-width: 767px) {
@@ -330,7 +377,6 @@
 
 .smile-two {
   position: absolute;
-
   animation: animatename 1s ease-in-out infinite alternate 1s;
 
   @media screen and (max-width: 767px) {
@@ -357,7 +403,6 @@
 
 .smile-three {
   position: absolute;
-
   animation: animatename 1s ease-in-out infinite alternate 1s;
 
   @media screen and (max-width: 767px) {
