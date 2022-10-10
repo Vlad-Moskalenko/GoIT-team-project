@@ -25,7 +25,7 @@
   align-items: center;
   width: 280px;
   height: 420px;
-  background-color: $ice-cream-color;
+
   border-radius: 24px;
 }
 .products__headings {
@@ -36,12 +36,38 @@
   padding-top: 123px;
 }
 .products__text {
+  display: block;
   width: 200px;
+  height: 124px;
 
   margin-bottom: 90px;
 }
 //  картинки на картці
-.products__item:nth-child(1)::before {
+.products__item--green {
+  background-color: $ice-cream-color;
+}
+
+.products__item--green::before {
+  content: '';
+  position: absolute;
+  top: -97px;
+  width: 201px;
+  height: 200px;
+  display: inline-block;
+  align-content: center;
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.products__item--green::after {
   content: '';
   position: absolute;
   top: -108px;
@@ -50,8 +76,86 @@
   align-content: center;
   background-position: center;
   background-repeat: no-repeat;
-
-  background-image: url(../images/products/ice-cream-mob-1x-min.png);
   width: 201px;
-  height: 241px;
+  height: 200px;
+  background-image: url(../images/products/mob-ice-cream-1x-min.png);
+  background-size: cover;
+  border-radius: 50%;
+}
+.products__item--yellow {
+  background-color: $ice-coffee-color;
+}
+.products__item--yellow::before {
+  content: '';
+  position: absolute;
+  top: -97px;
+  width: 201px;
+  height: 200px;
+  display: inline-block;
+  align-content: center;
+  background: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.products__item--yellow::after {
+  content: '';
+  position: absolute;
+  top: -108px;
+  display: inline-block;
+  align-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  background-image: url(../images/products/mob-ice-coffe-1x-min.png);
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.products__item--brown {
+  background-color: $milkshakes-color;
+}
+.products__item--brown::before {
+  content: '';
+  position: absolute;
+  top: -97px;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  align-content: center;
+  background: linear-gradient(
+      0deg,
+      rgba(213, 117, 63, 0.7),
+      rgba(213, 117, 63, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.products__item--brown::after {
+  content: '';
+  position: absolute;
+  top: -108px;
+  left: 39px;
+  display: inline-block;
+  align-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  background-image: url(../images/products/mob-milkshake-1x-min.png);
+  background-size: cover;
+  background-color: aqua;
+  border-radius: 50%;
 }
