@@ -43,7 +43,7 @@
             <use href="./images/header-hero/icons.svg#icon-burger"></use>
           </svg>
         </button>
-        <button class="btn buy-button" type="button">
+        <button class="btn buy-button" type="button" data-modal-open>
           <span class="buy-button__text">Buy now</span>
           <svg class="buy-button__icon" width="12" height="12">
             <use href="./images/header-hero/icons.svg#icon-button-arrow"></use>
@@ -168,5 +168,30 @@
         <use href="./images/header-hero/icons.svg#icon-button-arrow"></use>
       </svg>
     </button>
+  </div>
+</div>
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="close-button" type="button" data-modal-close>
+      <svg class="close-button__icon" width="20" height="20">
+        <use href="./images/header-hero/icons.svg#icon-cross"></use>
+      </svg>
+    </button>
+    <h2 class="title modal__title">Buy now</h2>
+    <ul class="modal-list">
+      <li class="modal__item">ice cream</li>
+      <li class="modal__item">ice coffee</li>
+      <li class="modal__item">milkshake</li>
+    </ul>
+    <form class="modal-form" name="modal-form">
+      <input type="text" class="modal-form__input" placeholder="Name" />
+      <input type="tel" class="modal-form__input" placeholder="Phone" />
+      <textarea
+        class="modal-form__input modal-form__input--textarea"
+        name="modal-form__textarea"
+        placeholder="Comment"
+      ></textarea>
+      <button class="btn modal-form__button" type="submit">Submit</button>
+    </form>
   </div>
 </div>
