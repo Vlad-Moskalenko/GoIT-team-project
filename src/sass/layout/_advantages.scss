@@ -67,12 +67,17 @@
 
 // ЗАГОЛОВОК ЕЛЕМЕНТА СПИСКУ
 .advantages__subtitle {
-  margin-bottom: 18px;
+  margin-bottom: 1.8rem;
   font-size: 36px;
   color: $light-text-color;
 
   @media screen and (min-width: 768px) {
+    font-size: 4.8rem;
     margin-bottom: 16px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 5.8rem;
   }
 }
 
@@ -93,6 +98,7 @@
   }
 
   @media screen and (min-width: 1200px) {
+    font-size: 1.6rem;
     max-width: 342px;
     margin: 0 auto;
   }
