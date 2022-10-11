@@ -1,4 +1,96 @@
-<!-- У секції двох-колірній фон, його потрібно реалізувати спозиціонувавши фонове зображення згідно макету. Зображення в секції контентне. Додатково можна підібрати тематичні зображення морозива і  зробити їх анімовану зміну. -->
-<section>
-  <div class="container"></div>
+<section class="gallery">
+  <div class="container">
+    <ul class="gallery__list">
+      <li class="gallery__item">
+        <picture>
+          <source
+            srcset="
+              ./images/gallery/mb-gallery1@1x.jpg 1x,
+              ./images/gallery/mb-gallery1@2x.jpg 2x
+            "
+            media="(max-width: 320px)"
+          />
+          <source
+            srcset="
+              ./images/gallery/tb-gallery1@1x.jpg 1x,
+              ./images/gallery/tb-gallery1@2x.jpg 2x
+            "
+            media="(max-width: 1199px)"
+          />
+          <source
+            srcset="
+              ./images/gallery/dt-gallery1@1x.jpg 1x,
+              ./images/gallery/dt-gallery1@2x.jpg 2x
+            "
+            media="(min-width: 1200px)"
+          />
+          <img
+            class="gallery__img"
+            src="./images/gallery/dt-gallery1@2x.jpg"
+            alt="ice-cream photo"
+          />
+        </picture>
+      </li>
+      <li class="gallery__item">
+        <picture>
+          <source
+            srcset="
+              ./images/gallery/mb-gallery2@1x.jpg 1x,
+              ./images/gallery/mb-gallery2@2x.jpg 2x
+            "
+            media="(max-width: 320px)"
+          />
+          <source
+            srcset="
+              ./images/gallery/tb-gallery2@1x.jpg 1x,
+              ./images/gallery/tb-gallery2@2x.jpg 2x
+            "
+            media="(max-width: 1199px)"
+          />
+          <source
+            srcset="
+              ./images/gallery/dt-gallery2@1x.jpg 1x,
+              ./images/gallery/dt-gallery2@2x.jpg 2x
+            "
+            media="(min-width: 1200px)"
+          />
+          <img
+            class="gallery__img"
+            src="./images/gallery/dt-gallery2@2x.jpg"
+            alt="ice-cream photo"
+          />
+        </picture>
+      </li>
+      <li class="gallery__item">
+        <picture>
+          <source
+            srcset="
+              ./images/gallery/mb-gallery@1x.jpg 1x,
+              ./images/gallery/mb-gallery@2x.jpg 2x
+            "
+            media="(max-width: 320px)"
+          />
+          <source
+            srcset="
+              ./images/gallery/tb-gallery@1x.jpg 1x,
+              ./images/gallery/tb-gallery@2x.jpg 2x
+            "
+            media="(max-width: 1199px)"
+          />
+          <source
+            srcset="
+              ./images/gallery/dt-gallery@1x.jpg 1x,
+              ./images/gallery/dt-gallery@2x.jpg 2x
+            "
+            media="(min-width: 1200px)"
+          />
+          <img
+            class="gallery__img"
+            src="./images/gallery/dt-gallery@2x.jpg"
+            alt="ice-cream photo"
+          />
+        </picture>
+      </li>
+    </ul>
+  </div>
 </section>
