@@ -2,6 +2,11 @@
   padding-top: 42px;
   padding-bottom: 36px;
   background-color: $accent-color;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 48px;
+    padding-bottom: 40px;
+  }
 }
 
 // СПИСОК
@@ -10,11 +15,20 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 25px;
+
+  @media screen and (min-width: 768px) {
+    flex-wrap: nowrap;
+    gap: 80px;
+  }
 }
 
 // ЕЛЕМЕНТ СПИСКУ
 .advantages__item {
   text-align: center;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 248px) / 3);
+  }
 }
 
 // ОБГОРТКА ІКОНКИ
@@ -28,6 +42,10 @@
   height: 50px;
   border-radius: 50%;
   background-color: $primary-color;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+  }
 }
 
 // ЗАГОЛОВОК ЕЛЕМЕНТА СПИСКУ
@@ -35,6 +53,10 @@
   margin-bottom: 18px;
   font-size: 36px;
   color: $light-text-color;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
+  }
 }
 
 // ТЕКСТ
@@ -46,5 +68,10 @@
 
   @media screen and (max-width: 480px) {
     max-width: 312px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.4rem;
+    font-weight: inherit;
   }
 }
