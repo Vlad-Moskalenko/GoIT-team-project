@@ -4,6 +4,48 @@
 У секції представлений блок із параграфами та кнопкою “Read more”. Кнопка має відкривати модальне вікно з повним описом (реалізація модального вікна не є обов'язковим завданням).
 
 Декоративне зображення з коровою абсолютно спозиціонувати згідно макету. -->
-<section>
-  <div class="container"></div>
+<section class="about">
+  <div class="about-container container">
+    <p class="about__title-label title-label">tradition and love</p>
+    <h2 class="about__title title">how it’s made?</h2>
+    <div class="about__content">
+      <div class="about__image-wrap">
+        <img
+          class="about__image"
+          srcset="
+            ./images/about/cow-279.jpg 279w,
+            ./images/about/cow-335.jpg 335w,
+            ./images/about/cow-490.jpg 490w,
+            ./images/about/cow-557.jpg 557w,
+            ./images/about/cow-670.jpg 670w,
+            ./images/about/cow-980.jpg 980w
+          "
+          sizes="(max-width: min-width: 320px) 279px, (min-width: 678px) 335px, (min-width: 1200px) 490px, 100vw"
+          src="./images/about/cow-279.jpg"
+          alt="Cow"
+        />
+      </div>
+      <div class="about__btn-text-wrap">
+        <div class="about__text">
+          <p class="about__paragraph">
+            Ice is a place where you will become not only a little happier, but
+            also healthier. Health is the main value for us, and we follow it
+            when creating our handmade desserts.
+          </p>
+          <p class="about__paragraph">
+            We use traditional recipes and 100% natural ingredients. Our
+            products are so natural that they can be given to children from the
+            age of three years. Sweets lovers can expect 55 types of ice cream,
+            15 types of coffee and 23 milkshakes.
+          </p>
+        </div>
+        <button type="button" class="about__btn btn btn--border btn--primary">
+          Read more
+          <svg class="about__icon-button-arrow" width="12" height="12">
+            <use href="./images/icons.svg#icon-button-arrow"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
 </section>
