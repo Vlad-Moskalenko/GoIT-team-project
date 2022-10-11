@@ -1,7 +1,7 @@
-<header class="page-header">
+<header class="page-header" id="page-header">
   <div class="container">
     <div class="header-content">
-      <a class="logo" href="#">
+      <a class="logo" href="index.html">
         <img
           srcset="
             ./images/header-hero/phone-logo@1x.png    40w,
@@ -19,16 +19,16 @@
       <nav class="header-nav">
         <ul class="header-nav__list">
           <li class="header-nav__item">
-            <a href="#" class="header-nav__link">Home</a>
+            <a href="#page-header" class="header-nav__link">Home</a>
           </li>
           <li class="header-nav__item">
-            <a href="#" class="header-nav__link">How it’s made?</a>
+            <a href="#about" class="header-nav__link">How it’s made?</a>
           </li>
           <li class="header-nav__item">
-            <a href="#" class="header-nav__link">Our products</a>
+            <a href="#products" class="header-nav__link">Our products</a>
           </li>
           <li class="header-nav__item">
-            <a href="#" class="header-nav__link">Contact</a>
+            <a href="#contacts" class="header-nav__link">Contact</a>
           </li>
         </ul>
       </nav>
@@ -40,13 +40,17 @@
           aria-controls="mobile-menu"
         >
           <svg class="burger__icon" width="32" height="32">
-            <use href="./images/header-hero/icons.svg#icon-burger"></use>
+            <use href="./images/icons.svg#icon-burger"></use>
           </svg>
         </button>
-        <button class="btn buy-button" type="button" data-modal-open>
-          <span class="buy-button__text">Buy now</span>
-          <svg class="buy-button__icon" width="12" height="12">
-            <use href="./images/header-hero/icons.svg#icon-button-arrow"></use>
+        <button
+          class="btn btn--primary btn--buy header__btn"
+          type="button"
+          data-modal-open
+        >
+          <span>Buy now</span>
+          <svg class="btn__icon" width="12" height="12">
+            <use href="./images/icons.svg#icon-button-arrow"></use>
           </svg>
         </button>
       </div>
@@ -54,16 +58,16 @@
   </div>
 </header>
 <section class="hero">
-  <div class="container">
+  <div class="container container--backgrounded">
     <div class="hero__content">
       <h1 class="hero__title">
         ice cream made with
         <span class="hero__accent-title">passion</span>
       </h1>
       <div class="hero__buttons">
-        <a href="#" class="hero__button hero__button--bordered">Products</a>
-        <a href="#" class="hero__button hero__button--underlined">
-          How it’s made?
+        <a href="#products" class="btn btn--bordered hero__btn">Products</a>
+        <a href="#about" class="btn btn--underlined hero__btn"
+          >How it’s made?
         </a>
       </div>
       <div class="hero__description">
@@ -79,15 +83,17 @@
           src="./images/header-hero/tablet-plate@1x.png"
           alt="Ice-cream plate"
         />
-        <p class="hero__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et
-          <a href="#">
+        <div class="hero__text-wrapper">
+          <p class="hero__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et
+          </p>
+          <a class="hero__link" href="#">
             <svg class="hero__arrow" width="41" height="15">
-              <use href="./images/header-hero/icons.svg#icon-arrow"></use>
+              <use href="./images/icons.svg#icon-arrow"></use>
             </svg>
           </a>
-        </p>
+        </div>
       </div>
       <div class="statistics">
         <p class="statistics__item">
@@ -115,10 +121,10 @@
           alt="Ice-cream"
         />
         <svg class="smiles" width="135" height="153">
-          <use href="./images/header-hero/icons.svg#icon-smiles"></use>
+          <use href="./images/icons.svg#icon-smiles"></use>
         </svg>
         <svg class="eye" width="22" height="25">
-          <use href="./images/header-hero/icons.svg#icon-eye"></use>
+          <use href="./images/icons.svg#icon-eye"></use>
         </svg>
       </div>
     </div>
@@ -142,30 +148,30 @@
       </a>
       <button class="cross js-close-menu" type="button">
         <svg class="cross__icon" width="32" height="32">
-          <use href="./images/header-hero/icons.svg#icon-cross"></use>
+          <use href="./images/icons.svg#icon-cross"></use>
         </svg>
       </button>
     </div>
     <nav class="mobile-nav">
       <ul class="mobile-nav__list">
         <li class="mobile-nav__item">
-          <a href="#" class="mobile-nav__link">Home</a>
+          <a href="#page-header" class="mobile-nav__link">Home</a>
         </li>
         <li class="mobile-nav__item">
-          <a href="#" class="mobile-nav__link">How it’s made?</a>
+          <a href="#about" class="mobile-nav__link">How it’s made?</a>
         </li>
         <li class="mobile-nav__item">
-          <a href="#" class="mobile-nav__link">Our products</a>
+          <a href="#products" class="mobile-nav__link">Our products</a>
         </li>
         <li class="mobile-nav__item">
-          <a href="#" class="mobile-nav__link">Contact</a>
+          <a href="#contacts" class="mobile-nav__link">Contact</a>
         </li>
       </ul>
     </nav>
-    <button class="btn menu-button" type="button">
-      <span class="menu-button__text">Buy now</span>
-      <svg class="menu-button__icon" width="12" height="12">
-        <use href="./images/header-hero/icons.svg#icon-button-arrow"></use>
+    <button class="btn btn--primary btn--buy mobile-menu__btn" type="button">
+      <span>Buy now</span>
+      <svg class="btn__icon" width="12" height="12">
+        <use href="./images/icons.svg#icon-button-arrow"></use>
       </svg>
     </button>
   </div>
@@ -174,7 +180,7 @@
   <div class="modal">
     <button class="close-button" type="button" data-modal-close>
       <svg class="close-button__icon" width="20" height="20">
-        <use href="./images/header-hero/icons.svg#icon-cross"></use>
+        <use href="./images/icons.svg#icon-cross"></use>
       </svg>
     </button>
     <h2 class="title modal__title">Buy now</h2>
