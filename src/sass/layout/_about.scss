@@ -4,6 +4,7 @@
   background-color: $accent-color;
 }
 
+// ЗАГОЛОВКИ
 .about__title-label {
   margin-bottom: 12px;
   color: $light-text-color;
@@ -15,29 +16,34 @@
   margin-bottom: 54px;
   color: $light-text-color;
 
+  // ТАБЛЕТ
   @media screen and (min-width: 768px) {
     max-width: 100%;
     margin-bottom: 80px;
     letter-spacing: 0.06em;
   }
 
+  // ДЕСКТОП
   @media screen and (min-width: 1200px) {
     margin-bottom: 121px;
   }
 }
 
+// КАРТИНКА+ТЕКСТ+КНОПКА
 .about__content {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
 
+  // ТАБЛЕТ
   @media screen and (min-width: 768px) {
     flex-wrap: nowrap;
     align-items: center;
     gap: 32px;
   }
 
+  // ДЕСКТОП
   @media screen and (min-width: 1200px) {
     justify-content: left;
     gap: 100px;
@@ -47,29 +53,35 @@
 .about__image-wrap {
   max-width: 335px;
 
+  // АДАПТИВ ПІД 480PX
   @media screen and (min-width: 480px) {
     max-width: 335px;
   }
 
+  // ТАБЛЕТ
   @media screen and (min-width: 768px) {
     max-width: calc((100% - 32px) / 2);
   }
 
+  // ДЕСКТОП
   @media screen and (min-width: 1200px) {
     max-width: 500px;
     width: 500px;
   }
 }
 
+// КОРОВА
 .about__image {
   box-shadow: 0 -21.82px $primary-color;
   border-radius: 1038.58px;
   width: 100%;
 
+  // ТАБЛЕТ
   @media screen and (min-width: 768px) {
     box-shadow: 0 -25.88px $primary-color;
   }
 
+  // ДЕСКТОП
   @media screen and (min-width: 1200px) {
     box-shadow: 0 -39px $primary-color;
   }
@@ -84,12 +96,14 @@
   padding-left: 30px;
   gap: 20px;
 
+  // АДАПТИВ ПІД 480PX
   @media screen and (min-width: 480px) {
     padding-left: 0;
     padding-right: 0;
     max-width: 380px;
   }
 
+  // ТАБЛЕТ
   @media screen and (min-width: 768px) {
     max-width: calc((100% - 32px) / 2);
     text-align: left;
@@ -97,11 +111,13 @@
     gap: 0;
   }
 
+  // ДЕСКТОП
   @media screen and (min-width: 1200px) {
     max-width: 463px;
   }
 }
 
+// ТЕКСТ
 .about__paragraph {
   color: $light-text-color;
   font-size: 1.2rem;
@@ -109,12 +125,14 @@
     margin-bottom: 4px;
   }
 
+  // МОБ.ВЕРСІЯ
   &:last-child {
     @media screen and (max-width: 767px) {
       display: none;
     }
   }
 
+  // ТАБЛЕТ
   &:not(:last-child) {
     @media screen and (min-width: 768px) {
       margin-bottom: 8px;
@@ -127,17 +145,20 @@
     }
   }
 
+  // ДЕСКТОП
   @media screen and (min-width: 1200px) {
     font-size: 1.6rem;
   }
 }
 
+// КНОПКА
 .about__btn {
   display: flex;
   align-items: center;
   max-width: 164px;
 }
 
+// ІКОНКА (додала клас, який вказував Сергій, буду чекати поки запушиться сама іконка)
 .icon-button-arrow {
   margin-left: 5px;
 }
