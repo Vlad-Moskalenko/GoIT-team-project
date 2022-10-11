@@ -15,7 +15,7 @@
 
   @media screen and (min-width: $desktop-width) {
     padding-bottom: 120px;
-    padding-top: 478px;
+    padding-top: 506px;
   }
 }
 
@@ -37,7 +37,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    top: -124px;
+    top: -96px;
     gap: 32px;
   }
 }
@@ -70,20 +70,20 @@
 }
 
 .contacts__category {
-  max-height: 16px;
   margin-bottom: 20px;
 
   display: flex;
   justify-content: center;
-  align-items: center;
 
+  line-height: 1.33;
   border-radius: 4px;
   background-color: $primary-color;
 
   @media screen and (min-width: $tablet-width) {
     margin-bottom: 32px;
     font-size: 1.6rem;
-    max-height: 28px;
+    line-height: 1.75;
+    border-radius: 6px;
   }
 }
 
