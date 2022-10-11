@@ -270,12 +270,20 @@
   }
 }
 
+.hero__plate {
+  animation: plate-rotate 10s linear infinite;
+}
+
 .hero__text {
   position: relative;
   max-width: 151px;
   font-size: 1.2rem;
   line-height: 1.4;
   color: $light-text-color;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 200px;
+  }
 }
 
 .hero__arrow {
