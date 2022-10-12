@@ -1,14 +1,19 @@
 .advantages {
   padding-top: 42px;
   padding-bottom: 36px;
+  color: $light-text-color;
   background-color: $accent-color;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  letter-spacing: 0em;
+  font-weight: $bold-text;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-width) {
     padding-top: 48px;
     padding-bottom: 40px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-width) {
     padding-top: 60px;
     padding-bottom: 84px;
   }
@@ -21,12 +26,12 @@
   flex-wrap: wrap;
   gap: 25px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-width) {
     flex-wrap: nowrap;
     gap: 80px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-width) {
     gap: 32px;
   }
 }
@@ -35,11 +40,11 @@
 .advantages__item {
   text-align: center;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-width) {
     width: calc((100% - 248px) / 3);
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-width) {
     width: calc((100% - 64px) / 3);
   }
 }
@@ -56,48 +61,43 @@
   border-radius: 50%;
   background-color: $primary-color;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-width) {
     margin-bottom: 32px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-width) {
     margin-bottom: 40px;
   }
 }
 
-// ЗАГОЛОВОК ЕЛЕМЕНТА СПИСКУ
+// ПІДЗАГОЛОВОК ЕЛЕМЕНТА СПИСКУ
 .advantages__subtitle {
   margin-bottom: 1.8rem;
   font-size: 36px;
-  color: $light-text-color;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-width) {
     font-size: 4.8rem;
     margin-bottom: 16px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-width) {
     font-size: 5.8rem;
+    margin-bottom: 8px;
   }
 }
 
 // ТЕКСТ
 .advantages__text {
-  font-size: 1.2rem;
-  line-height: 1.7;
-  font-weight: $bold-text;
-  color: $light-text-color;
-
   @media screen and (max-width: 767px) {
     max-width: 312px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-width) {
     font-size: 1.4rem;
     font-weight: inherit;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-width) {
     font-size: 1.6rem;
     max-width: 342px;
     margin: 0 auto;
