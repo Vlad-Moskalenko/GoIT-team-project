@@ -115,6 +115,10 @@
   margin-top: auto;
   background-color: transparent;
   border-color: transparent;
+  transition-property: transform;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-timing-function;
+  transform-origin: left center;
 
   &:focus {
     transform: scale(120%);
@@ -123,7 +127,9 @@
 }
 .products__arrow {
   transition-property: transform;
-  transition-duration: 250ms;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-timing-function;
+  transform-origin: left center;
 
   &:hover {
     transform: scaleX(120%);
