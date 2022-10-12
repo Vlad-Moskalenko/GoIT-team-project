@@ -168,7 +168,11 @@
         </li>
       </ul>
     </nav>
-    <button class="btn btn--primary btn--buy mobile-menu__btn" type="button">
+    <button
+      class="btn btn--primary btn--buy mobile-menu__btn"
+      type="button"
+      data-modal-open
+    >
       <span>Buy now</span>
       <svg class="btn__icon" width="12" height="12">
         <use href="./images/icons.svg#icon-button-arrow"></use>
@@ -176,7 +180,7 @@
     </button>
   </div>
 </div>
-<!-- <div class="backdrop is-hidden" data-modal>
+<div class="backdrop is-hidden" data-modal>
   <div class="modal">
     <button class="close-button" type="button" data-modal-close>
       <svg class="close-button__icon" width="20" height="20">
@@ -185,19 +189,47 @@
     </button>
     <h2 class="title modal__title">Buy now</h2>
     <ul class="modal-list">
-      <li class="modal__item">ice cream</li>
-      <li class="modal__item">ice coffee</li>
-      <li class="modal__item">milkshake</li>
+      <li class="modal-list__item modal-list__item--green">ice cream</li>
+      <li class="modal-list__item modal-list__item--yellow">ice coffee</li>
+      <li class="modal-list__item modal-list__item--brown">milkshake</li>
     </ul>
     <form class="modal-form" name="modal-form">
-      <input type="text" class="modal-form__input" placeholder="Name" />
-      <input type="tel" class="modal-form__input" placeholder="Phone" />
-      <textarea
-        class="modal-form__input modal-form__input--textarea"
-        name="modal-form__textarea"
-        placeholder="Comment"
-      ></textarea>
-      <button class="btn modal-form__button" type="submit">Submit</button>
+      <div class="modal-form__input-wrapper">
+        <input
+          type="text"
+          class="modal-form__input"
+          name="name"
+          id="name"
+          placeholder=" "
+          required
+          minlength="2"
+        />
+        <label class="modal-form__label" for="name">Name</label>
+      </div>
+      <div class="modal-form__input-wrapper">
+        <input
+          type="tel"
+          class="modal-form__input"
+          name="tel"
+          id="tel"
+          placeholder=" "
+          required
+          minlength="10"
+        />
+        <label class="modal-form__label" for="tel">Phone</label>
+      </div>
+      <div
+        class="modal-form__input-wrapper modal-form__input-wrapper--textarea"
+      >
+        <textarea
+          class="modal-form__input modal-form__input--textarea"
+          name="modal-form__textarea"
+          id="comment"
+          placeholder=" "
+        ></textarea>
+        <label class="modal-form__label" for="comment">Comment</label>
+      </div>
+      <button class="btn btn--primary modal__btn" type="submit">Submit</button>
     </form>
   </div>
-</div> -->
+</div>
