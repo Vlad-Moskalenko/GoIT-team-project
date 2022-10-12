@@ -1,13 +1,17 @@
 .about {
-  position: relative;
   padding-top: 60px;
   background-color: $accent-color;
+  color: $light-text-color;
 }
 
 // ЗАГОЛОВКИ
 .about__title-label {
   margin-bottom: 12px;
-  color: $light-text-color;
+
+  // ДЕСКТОП
+  @media screen and (min-width: $desktop-width) {
+    letter-spacing: $default-letter-spacing;
+  }
 }
 
 .about__title {
@@ -17,15 +21,15 @@
   color: $light-text-color;
 
   // ТАБЛЕТ
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-width) {
     max-width: 100%;
-    margin-bottom: 80px;
+    margin-bottom: 72px;
     letter-spacing: 0.06em;
   }
 
   // ДЕСКТОП
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 121px;
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 84px;
   }
 }
 
@@ -37,16 +41,16 @@
   gap: 40px;
 
   // ТАБЛЕТ
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-width) {
     flex-wrap: nowrap;
     align-items: center;
     gap: 32px;
   }
 
   // ДЕСКТОП
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-width) {
     justify-content: left;
-    gap: 100px;
+    gap: 108px;
   }
 }
 
@@ -54,36 +58,43 @@
   max-width: 335px;
 
   // АДАПТИВ ПІД 480PX
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: $phone-width) {
     max-width: 335px;
   }
 
   // ТАБЛЕТ
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-width) {
     max-width: calc((100% - 32px) / 2);
   }
 
   // ДЕСКТОП
-  @media screen and (min-width: 1200px) {
-    max-width: 500px;
-    width: 500px;
+  @media screen and (min-width: $desktop-width) {
+    max-width: 490px;
+    width: 490px;
   }
 }
 
 // КОРОВА
 .about__image {
   box-shadow: 0 -21.82px $primary-color;
+  margin-top: 21.82px;
+  // box-shadow+margin-top - комбінація для того,
+  // щоб враховувати розмір тіні у розмір самого зображення.
+  // Це щоб центрування не руйнувалось.
+
   border-radius: 1038.58px;
   width: 100%;
 
   // ТАБЛЕТ
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-width) {
     box-shadow: 0 -25.88px $primary-color;
+    margin-top: 25.88px;
   }
 
   // ДЕСКТОП
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-width) {
     box-shadow: 0 -39px $primary-color;
+    margin-top: 39px;
   }
 }
 
@@ -97,14 +108,14 @@
   gap: 20px;
 
   // АДАПТИВ ПІД 480PX
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: $phone-width) {
     padding-left: 0;
     padding-right: 0;
     max-width: 380px;
   }
 
   // ТАБЛЕТ
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-width) {
     max-width: calc((100% - 32px) / 2);
     text-align: left;
     align-items: baseline;
@@ -112,7 +123,7 @@
   }
 
   // ДЕСКТОП
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-width) {
     max-width: 463px;
   }
 }
@@ -134,19 +145,19 @@
 
   // ТАБЛЕТ
   &:not(:last-child) {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet-width) {
       margin-bottom: 8px;
     }
   }
 
   &:last-child {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet-width) {
       margin-bottom: 48px;
     }
   }
 
   // ДЕСКТОП
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-width) {
     font-size: 1.6rem;
   }
 }
