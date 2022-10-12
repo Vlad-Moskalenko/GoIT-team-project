@@ -123,7 +123,26 @@
 }
 .products__link {
   margin-top: auto;
+  background-color: transparent;
+  border-color: transparent;
+
+  &:focus {
+    transform: scale(120%);
+    outline: none;
+  }
 }
+.products__arrow {
+  transition-property: transform;
+  transition-duration: 250ms;
+
+  &:hover {
+    transform: scaleX(120%);
+  }
+  &:focus {
+    transform: scale(120%);
+  }
+}
+
 //  картинки на картці
 .products__item--green {
   background-color: $ice-cream-color;
