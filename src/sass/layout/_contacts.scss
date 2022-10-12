@@ -1,0 +1,221 @@
+.contacts {
+  position: relative;
+  padding-top: 1028px;
+  padding-bottom: 40px;
+  background-color: $accent-color;
+
+  @media screen and (min-width: 320px) {
+    padding-top: 962px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    padding-bottom: 40px;
+    padding-top: 284px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-bottom: 120px;
+    padding-top: 506px;
+  }
+}
+
+.contacts__list {
+  position: absolute;
+  top: -346px;
+  left: 50%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  transform: translateX(-50%);
+
+  @media screen and (min-width: $tablet-width) {
+    top: -303px;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    top: -96px;
+    gap: 32px;
+  }
+}
+
+.contacts__item {
+  padding: 38px 32px 40px 32px;
+  width: calc(100vw - 40px);
+
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.86;
+  background-color: $light-text-color;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+
+  @media screen and (min-width: 320px) {
+    width: 280px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    width: calc((768px - 32px * 3) / 3);
+    padding: 40px 24px 36px 24px;
+    font-size: 1.4rem;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: calc((1200px - 32px * 3) / 3);
+    padding: 40px 40px 32px 40px;
+    font-size: 1.6rem;
+  }
+}
+
+.contacts__category {
+  margin-bottom: 20px;
+  padding: 0 20.5px;
+  min-width: 80px;
+
+  display: inline-block;
+
+  line-height: 1.33;
+  text-align: center;
+  border-radius: 4px;
+  background-color: $primary-color;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 32px;
+    padding: 0 11px;
+    min-width: 75px;
+
+    font-size: 1.6rem;
+    line-height: 1.75;
+    border-radius: 6px;
+  }
+}
+
+.contacts__address {
+  margin-bottom: 22px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e1e1e1;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-bottom: 18px;
+    margin-bottom: 32px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-bottom: 23px;
+  }
+}
+
+.contacts__address-link {
+  margin-top: 8px;
+  display: block;
+  color: $address-text-color;
+  line-height: 1.83;
+
+  @media screen and (min-width: $tablet-width) and (max-width: 1199px) {
+    margin-top: 12px;
+    line-height: 1.87;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.contacts__item:first-of-type .contacts__address-link {
+  max-width: 192px;
+  @media screen and (min-width: $desktop-width) {
+    max-width: 262px;
+  }
+}
+
+.contacts__item:nth-of-type(2) .contacts__address-link {
+  @media screen and (min-width: $tablet-width) and (max-width: ($desktop-width - 1px)) {
+    max-width: 158px;
+  }
+}
+
+.contacts__item:nth-of-type(3) .contacts__address-link {
+  max-width: 185px;
+  @media screen and (min-width: $desktop-width) {
+    max-width: 261px;
+  }
+}
+
+.contacts__work-time {
+  margin-bottom: 8px;
+  letter-spacing: normal;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 12px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 13px;
+    letter-spacing: 0.04em;
+  }
+
+  &:nth-last-of-type(1) {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e1e1e1;
+
+    @media screen and (min-width: $tablet-width) {
+      margin-bottom: 33px;
+      padding-bottom: 33px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      margin-bottom: 31px;
+      padding-bottom: 31px;
+    }
+  }
+
+  > span {
+    display: block;
+    color: $disabled-color;
+    letter-spacing: normal;
+
+    @media screen and (min-width: $tablet-width) and (max-width: ($desktop-width - 1px)) {
+      line-height: 1.5;
+    }
+  }
+}
+
+.contacts__email,
+.contacts__tel {
+  display: block;
+  line-height: 1.5;
+  letter-spacing: normal;
+
+  @media screen and (min-width: $tablet-width) {
+    line-height: 1.83;
+  }
+}
+
+.contacts__btn-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  @media screen and (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.contacts__btn {
+  min-width: 196px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  @media screen and (min-width: $tablet-width) {
+    gap: 6px;
+  }
+}

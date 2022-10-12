@@ -1,3 +1,7 @@
-@mixin transition($property: color) {
+@mixin transition(
+  $property: color,
+  $transition-duration,
+  $transition-timing-function
+) {
   transition: $property $transition-duration $transition-timing-function;
 }

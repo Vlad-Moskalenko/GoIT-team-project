@@ -13,11 +13,14 @@
   cursor: pointer;
 }
 
-.btn--border {
+.btn--bordered {
   border-color: $primary-color;
   background-color: transparent;
 
-  &:hover{
+  transition: color $transition-duration $transition-timing-function,
+    border-color $transition-duration $transition-timing-function;
+
+  &:hover {
     border-color: $hover-color;
   }
 
@@ -31,10 +34,32 @@
   }
 }
 
+.btn--underlined {
+  color: $primary-color;
+  text-decoration: underline;
+
+  transition: color $transition-duration $transition-timing-function;
+
+  &:hover {
+    color: $hover-color;
+  }
+
+  &:focus {
+    color: $light-text-color;
+  }
+
+  &:disabled {
+    color: $disabled-color;
+  }
+}
+
 .btn--primary {
   background-color: $primary-color;
 
-  &:hover{
+  transition: color $transition-duration $transition-timing-function,
+    background-color $transition-duration $transition-timing-function;
+
+  &:hover {
     background-color: $hover-color;
   }
 
@@ -45,5 +70,23 @@
 
   &:disabled {
     background-color: $disabled-color;
+  }
+}
+
+.btn--border {
+  border-color: $primary-color;
+  background-color: transparent;
+
+  &:hover {
+    border-color: $hover-color;
+  }
+
+  &:focus {
+    color: $light-text-color;
+    border-color: $hover-color;
+  }
+
+  &:disabled {
+    border-color: $disabled-color;
   }
 }
