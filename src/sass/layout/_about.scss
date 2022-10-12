@@ -166,10 +166,5 @@
 .about__btn {
   display: flex;
   align-items: center;
-  max-width: 164px;
-}
-
-// ІКОНКА (додала клас, який вказував Сергій, буду чекати поки запушиться сама іконка)
-.icon-button-arrow {
-  margin-left: 5px;
+  gap: 5px;
 }
