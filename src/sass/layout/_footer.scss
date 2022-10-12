@@ -113,7 +113,7 @@
 }
 
 .footer__social-item {
-  @include transition(transform);
+  @include transition(transform, $transition-duration, $transition-timing-function);
   border-radius: 50%;
   overflow: hidden;
   transform: scale(1);
@@ -124,7 +124,7 @@
 }
 
 .footer__social-link {
-  @include transition;
+  @include transition(color, $transition-duration, $transition-timing-function);
   color: $accent-color;
 
   &:hover,
