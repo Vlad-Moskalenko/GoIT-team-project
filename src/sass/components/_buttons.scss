@@ -72,3 +72,21 @@
     background-color: $disabled-color;
   }
 }
+
+.btn--border {
+  border-color: $primary-color;
+  background-color: transparent;
+
+  &:hover {
+    border-color: $hover-color;
+  }
+
+  &:focus {
+    color: $light-text-color;
+    border-color: $hover-color;
+  }
+
+  &:disabled {
+    border-color: $disabled-color;
+  }
+}
