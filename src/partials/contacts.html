@@ -109,3 +109,105 @@
     </li>
   </ul>
 </section>
+
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="close-button" type="button" data-modal-close>
+      <svg class="close-button__icon" width="20" height="20">
+        <use href="./images/icons.svg#icon-cross"></use>
+      </svg>
+    </button>
+    <div class="modal__locations-container">
+      <h2 class="title modal__title modal__locations-title">Our Locations</h2>
+      <iframe
+        class="modal__locations-map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d67402.16209817467!2d-87.80557926582226!3d41.703622870635314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e39ad302b2c19%3A0xc808e9b14d04eb2b!2s10340%20Ridgeland%20Ave%2C%20Chicago%20Ridge%2C%20IL%2060415%2C%20%D0%A1%D0%A8%D0%90!5e0!3m2!1sru!2sua!4v1665486910924!5m2!1sru!2sua"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <a
+        href="https://goo.gl/maps/expSHVfVwxbLBAXM9"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        class="btn btn--primary modal__btn"
+      >
+        Open map
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="close-button" type="button" data-modal-close>
+      <svg class="close-button__icon" width="20" height="20">
+        <use href="./images/icons.svg#icon-cross"></use>
+      </svg>
+    </button>
+    <div class="modal__franchise-container">
+      <h2 class="title modal__title modal__franchise-title">
+        Thank you for your interest in owning an Ice Cream shop
+      </h2>
+      <p class="modal__franchise-text">
+        Due to the overwhelming volume of franchise requests we are not
+        accepting new franchisee applications at this time. Once the application
+        process resumes, we will contact you for further information. Please
+        fill out the contact information below and we will reach out for
+        additional information. We appreciate your patience.
+      </p>
+      <form class="modal-form" name="modal-form">
+        <div class="modal-form__input-wrapper">
+          <input
+            type="text"
+            class="modal-form__input"
+            name="name"
+            id="name"
+            placeholder=" "
+            required
+            minlength="2"
+          />
+          <label class="modal-form__label" for="name">Name</label>
+        </div>
+        <div class="modal-form__input-wrapper">
+          <input
+            type="tel"
+            class="modal-form__input"
+            name="tel"
+            id="tel"
+            placeholder=" "
+            required
+            minlength="10"
+          />
+          <label class="modal-form__label" for="tel">Phone</label>
+        </div>
+        <div class="modal-form__input-wrapper">
+          <input
+            type="email"
+            class="modal-form__input"
+            name="email"
+            id="email"
+            placeholder=" "
+            required
+          />
+          <label class="modal-form__label" for="email">Email</label>
+        </div>
+        <div
+          class="modal-form__input-wrapper modal-form__input-wrapper--textarea"
+        >
+          <textarea
+            class="modal-form__input modal-form__input--textarea"
+            name="modal-form__textarea"
+            id="comment"
+            placeholder=" "
+          ></textarea>
+          <label class="modal-form__label" for="comment">Comment</label>
+        </div>
+        <button class="btn btn--primary modal__btn" type="submit">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
