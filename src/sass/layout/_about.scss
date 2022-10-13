@@ -105,7 +105,7 @@
   text-align: center;
   padding-right: 30px;
   padding-left: 30px;
-  gap: 20px;
+  gap: 14px;
 
   // АДАПТИВ ПІД 480PX
   @media screen and (min-width: $phone-width) {
@@ -132,6 +132,14 @@
 .about__paragraph {
   color: $light-text-color;
   font-size: 1.2rem;
+
+  &:nth-child(2) {
+    @media screen and (max-width: 479px) {
+    line-height: 1.63;
+    letter-spacing: 0.020em;
+    }
+  }
+
   &:first-child {
     margin-bottom: 4px;
   }
