@@ -174,6 +174,10 @@
 
 .hero__link {
   display: block;
+
+  &:focus > .hero__arrow {
+    transform: scale(120%);
+  }
 }
 
 .hero__arrow {
@@ -183,10 +187,6 @@
 
   &:hover {
     transform: scaleX(120%);
-  }
-
-  &:focus {
-    transform: scale(120%);
   }
 }
 
