@@ -1,0 +1,76 @@
+.page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 12px 0;
+
+  @media screen and (min-width: $tablet-width) {
+    padding: 20px 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 18px 0;
+  }
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  @media screen and (min-width: $desktop-width) {
+    margin-right: 270px;
+  }
+}
+
+.header-nav {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.header-nav__list {
+  display: flex;
+  gap: 27px;
+}
+
+.header-nav__link {
+  font-size: 1.6rem;
+  font-weight: $bold-text;
+  line-height: calc(20 / 16);
+  color: $light-text-color;
+  transition: color $transition-duration $transition-timing-function;
+  letter-spacing: 0.1;
+
+  &:hover,
+  &:focus {
+    color: $primary-color;
+  }
+}
+
+.header-content__buttons {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-left: auto;
+}
+
+.btn--buy {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  line-height: calc(17 / 14);
+}
+
+.header__btn {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.btn__icon {
+  fill: currentColor;
+}

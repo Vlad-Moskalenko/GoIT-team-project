@@ -1,0 +1,59 @@
+<header class="page-header" id="page-header">
+  <div class="container">
+    <div class="header-content">
+      <a class="logo" href="index.html">
+        <img
+          srcset="
+            ./images/header-hero/phone-logo@1x.png    40w,
+            ./images/header-hero/phone-logo@2x.png    80w,
+            ./images/header-hero/tablet-logo@1x.png   48w,
+            ./images/header-hero/tablet-logo@2x.png   96w,
+            ./images/header-hero/desktop-logo@1x.png  60w,
+            ./images/header-hero/desktop-logo@2x.png 120w
+          "
+          sizes="(min-width: 1200px) 60px, (min-width: 768px) 48px, 40px"
+          src="./images/header-hero/phone-logo@1x.png"
+          alt="Site logo"
+        />
+      </a>
+      <nav class="header-nav">
+        <ul class="header-nav__list">
+          <li class="header-nav__item">
+            <a href="#page-header" class="header-nav__link">Home</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#about" class="header-nav__link">How it’s made?</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#products" class="header-nav__link">Our products</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#contacts" class="header-nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-content__buttons">
+        <button
+          class="burger js-open-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="burger__icon" width="32" height="32">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
+        <button
+          class="btn btn--primary btn--buy header__btn"
+          type="button"
+          data-modal-open="buy-now"
+        >
+          Buy now
+          <svg class="btn__icon" width="12" height="12">
+            <use href="./images/icons.svg#icon-button-arrow"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

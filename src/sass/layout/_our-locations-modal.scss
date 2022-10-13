@@ -1,0 +1,26 @@
+.modal__locations-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__locations-title {
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 32px;
+  }
+}
+
+.modal__locations-map {
+  width: 224px;
+  height: 199px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 448px;
+    height: 260px;
+    margin-bottom: 32px;
+  }
+}

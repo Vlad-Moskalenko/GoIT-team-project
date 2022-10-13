@@ -1,0 +1,53 @@
+<div class="backdrop is-hidden" data-modal="buy-now">
+  <div class="modal">
+    <button class="close-button" type="button" data-modal-close>
+      <svg class="close-button__icon" width="20" height="20">
+        <use href="./images/icons.svg#icon-cross"></use>
+      </svg>
+    </button>
+    <h2 class="title modal__title">Buy now</h2>
+    <ul class="modal-list">
+      <li class="modal-list__item modal-list__item--green">ice cream</li>
+      <li class="modal-list__item modal-list__item--yellow">ice coffee</li>
+      <li class="modal-list__item modal-list__item--brown">milkshake</li>
+    </ul>
+    <form class="modal-form" name="modal-form">
+      <div class="modal-form__input-wrapper">
+        <input
+          type="text"
+          class="modal-form__input"
+          name="name"
+          id="name"
+          placeholder="&#32;"
+          required
+          minlength="2"
+        />
+        <label class="modal-form__label" for="name">Name</label>
+      </div>
+      <div class="modal-form__input-wrapper">
+        <input
+          type="tel"
+          class="modal-form__input"
+          name="tel"
+          id="tel"
+          placeholder="&#32;"
+          required
+          minlength="10"
+        />
+        <label class="modal-form__label" for="tel">Phone</label>
+      </div>
+      <div
+        class="modal-form__input-wrapper modal-form__input-wrapper--textarea"
+      >
+        <textarea
+          class="modal-form__input modal-form__input--textarea"
+          name="modal-form__textarea"
+          id="comment"
+          placeholder="&#32;"
+        ></textarea>
+        <label class="modal-form__label" for="comment">Comment</label>
+      </div>
+      <button class="btn btn--primary modal__btn" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
