@@ -1,6 +1,6 @@
-<section id="contacts" class="contacts">
+<section class="contacts">
   <h2 class="visually-hidden">Contacts</h2>
-  <ul class="contacts__list">
+  <ul id="contacts" class="contacts__list">
     <li class="contacts__item">
       <p class="contacts__category">CAFE</p>
       <p class="contacts__address">
@@ -84,7 +84,11 @@
   </ul>
   <ul class="contacts__btn-list">
     <li class="contacts__btn-item">
-      <button type="button" class="btn btn--primary contacts__btn">
+      <button
+        type="button"
+        class="btn btn--primary contacts__btn"
+        data-modal-open="locations"
+      >
         Our Locations
         <svg width="12" height="12" class="contacts_btn-icon">
           <use href="./images/icons.svg#icon-button-arrow"></use>
@@ -92,7 +96,11 @@
       </button>
     </li>
     <li class="contacts__btn-item">
-      <button type="button" class="btn btn--border contacts__btn">
+      <button
+        type="button"
+        class="btn btn--border contacts__btn"
+        data-modal-open="franchise"
+      >
         Franchise
         <svg width="12" height="12" class="contacts_btn-icon">
           <use href="./images/icons.svg#icon-button-arrow"></use>

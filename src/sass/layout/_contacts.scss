@@ -2,7 +2,7 @@
   position: relative;
   padding-top: 1028px;
   padding-bottom: 40px;
-  background-color: $accent-color;
+  // background-color: $accent-color;
 
   @media screen and (min-width: 320px) {
     padding-top: 962px;
@@ -213,9 +213,71 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 11px;
+}
+
+.contacts_btn-icon {
+  fill: currentColor;
+}
+
+// Modal "Our Locations"
+
+.modal__locations-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__locations-title {
+  margin-bottom: 20px;
 
   @media screen and (min-width: $tablet-width) {
-    gap: 6px;
+    margin-bottom: 32px;
   }
+}
+
+.modal__locations-map {
+  width: 224px;
+  height: 199px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  @media screen and (min-width: $tablet-width) {
+    width: 448px;
+    height: 260px;
+    margin-bottom: 32px;
+  }
+}
+
+// Modal "Franchise"
+
+.modal__franchise-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__franchise-title {
+  margin-bottom: 20px;
+  @media screen and (min-width: $tablet-width) {
+    gap: 10px;
+    max-width: 322px;
+    margin-bottom: 24px;
+  }
+}
+
+.modal__franchise-text {
+  margin-bottom: 24px;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  letter-spacing: normal;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 32px;
+    padding: 0 24px;
+    font-size: 1.6rem;
+  }
+}
+
+html {
+  overflow-y: scroll;
 }

@@ -1,0 +1,27 @@
+.modal__franchise-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__franchise-title {
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $tablet-width) {
+    max-width: 322px;
+    margin-bottom: 24px;
+  }
+}
+
+.modal__franchise-text {
+  margin-bottom: 24px;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  letter-spacing: normal;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 32px;
+    padding: 0 24px;
+    font-size: 1.6rem;
+  }
+}

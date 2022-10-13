@@ -1,0 +1,306 @@
+.container--backgrounded {
+  background: url(../images/header-hero/phone-left-balls@1x.png) bottom left /
+      110px 34px no-repeat,
+    url(../images/header-hero/phone-right-balls@1x.png) bottom right / 130px
+      48px no-repeat;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background: url(../images/header-hero/phone-left-balls@2x.png) bottom left /
+        110px 34px no-repeat,
+      url(../images/header-hero/phone-right-balls@2x.png) bottom right / 130px
+        48px no-repeat;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    background: url(../images/header-hero/tablet-left-balls@1x.png) bottom left /
+        110px 34px no-repeat,
+      url(../images/header-hero/tablet-right-balls@1x.png) bottom right / 182px
+        67px no-repeat;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background: url(../images/header-hero/tablet-left-balls@2x.png) bottom
+          left / 110px 34px no-repeat,
+        url(../images/header-hero/tablet-right-balls@2x.png) bottom right /
+          182px 67px no-repeat;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    background: url(../images/header-hero/desktop-balls@1x.png) bottom center /
+      $desktop-width 384px no-repeat;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background: url(../images/header-hero/desktop-balls@2x.png) bottom center /
+        $desktop-width 384px no-repeat;
+    }
+  }
+}
+
+.hero {
+  position: relative;
+  // background-color: $accent-color;
+}
+
+.hero__content {
+  position: relative;
+  padding-top: 110px;
+  padding-bottom: 239px;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-top: 104px;
+    padding-bottom: 13px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-top: 118px;
+    padding-bottom: 65px;
+  }
+}
+
+.hero__title {
+  max-width: 250px;
+  font-family: $title-font-family;
+  text-transform: uppercase;
+  font-size: 2.6rem;
+  line-height: calc(33 / 26);
+
+  color: $light-text-color;
+  margin-bottom: 32px;
+
+  @media screen and (min-width: $tablet-width) {
+    max-width: 182px;
+    font-size: 1.8rem;
+    line-height: calc(23 / 18);
+    letter-spacing: normal;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    max-width: 367px;
+    font-size: 3.8rem;
+    line-height: calc(48 / 38);
+    letter-spacing: 1.4;
+    margin-bottom: 28px;
+  }
+}
+
+.hero__accent-title {
+  font-size: 3.4rem;
+  line-height: 0;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 2.4rem;
+    line-height: calc(48 / 38);
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    font-size: 3.8rem;
+  }
+}
+
+.hero__buttons {
+  display: flex;
+  gap: 8px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 28px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    gap: 0;
+    margin-bottom: 42px;
+  }
+}
+
+.hero__btn {
+  display: block;
+  font-size: 0.8rem;
+  line-height: calc(10 / 8);
+  letter-spacing: normal;
+  padding: 6px 10px;
+  border-radius: 8px;
+
+  @media screen and (min-width: $desktop-width) {
+    font-size: 1.4rem;
+    line-height: calc(18 / 14);
+    padding: 10px 32px;
+    border-radius: 10px;
+  }
+}
+
+.hero__description {
+  position: relative;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.hero__plate {
+  animation: plate-rotate 20s linear infinite;
+}
+
+.hero__text-wrapper {
+  position: absolute;
+  top: 28px;
+  left: 185px;
+
+  @media screen and (min-width: $desktop-width) {
+    top: 68px;
+    left: 239px;
+  }
+}
+
+.hero__text {
+  max-width: 151px;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  letter-spacing: normal;
+  color: $light-text-color;
+  margin-bottom: 12px;
+
+  @media screen and (min-width: $desktop-width) {
+    font-size: 1.4rem;
+    max-width: 200px;
+    margin-bottom: 24px;
+  }
+}
+
+.hero__link {
+  display: block;
+
+  &:focus > .hero__arrow {
+    transform: scale(120%);
+  }
+}
+
+.hero__arrow {
+  fill: $light-text-color;
+  transform-origin: left center;
+  transition: transform $transition-duration $transition-timing-function;
+
+  &:hover {
+    transform: scaleX(120%);
+  }
+}
+
+.hero__image-wrapper {
+  position: absolute;
+  min-width: 157px;
+
+  @media screen and (max-width: 767px) {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    animation: ice-cream-rotate 1s ease-in-out;
+    bottom: 0;
+    right: 61px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    right: 86px;
+  }
+}
+
+.hero__img {
+  animation: ice-cream-shadow-spawn 1s ease-in-out forwards 1s,
+    ice-cream-shadow-flash 1s ease-in-out 2s alternate infinite;
+}
+
+.smiles {
+  position: absolute;
+  top: 0;
+  left: 25px;
+
+  @media screen and (min-width: $tablet-width) {
+    top: 4px;
+    left: 45px;
+    width: 214px;
+    height: 240px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    top: 12px;
+    left: 72px;
+    width: 384px;
+    height: 411px;
+  }
+}
+
+.eye {
+  position: absolute;
+  top: 24px;
+  left: 94px;
+  animation: eye-close 5s ease-in-out alternate infinite;
+
+  @media screen and (min-width: $tablet-width) {
+    top: 40px;
+    left: 155px;
+    width: 34px;
+    height: 38px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    top: 68px;
+    left: 268px;
+    width: 62px;
+    height: 66px;
+  }
+}
+
+.statistics {
+  position: absolute;
+  top: 94px;
+  right: 0;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    top: 126px;
+  }
+}
+
+.statistics__item {
+  font-size: 0.8rem;
+  line-height: calc(10 / 8);
+  color: $light-text-color;
+  text-align: right;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    font-size: 1.4rem;
+    line-height: calc(17 / 14);
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.statistics__number {
+  display: block;
+  font-size: 2.8rem;
+  line-height: calc(34 / 28);
+  font-weight: $black-text;
+  color: $default-text-color;
+  margin-bottom: 4px;
+
+  @media screen and (min-width: $desktop-width) {
+    font-size: 4.6rem;
+    line-height: calc(56 / 46);
+  }
+}

@@ -1,4 +1,4 @@
-<section class="about">
+<section id="about" class="about">
   <div class="container">
     <!-- Лейбл -->
     <p class="about__title-label title-label">tradition and love</p>
@@ -18,7 +18,7 @@
             ./images/about/cow-670.jpg 670w,
             ./images/about/cow-980.jpg 980w
           "
-          sizes="(min-width: 320px) 279px, (min-width: 768px) 335px, (min-width: 1200px) 490px, 100vw"
+          sizes="(min-width: 1200px) 490px, (min-width: 768px) 335px, (min-width: 320px) 279px, 100vw"
           src="./images/about/cow-279.jpg"
           alt="Cow"
         />
@@ -42,7 +42,11 @@
           </p>
         </div>
         <!-- Кнопка -->
-        <button type="button" class="about__btn btn btn--border btn--primary">
+        <button
+          type="button"
+          class="about__btn btn btn--primary"
+          data-modal-open="more"
+        >
           Read more
           <svg class="about__icon-button-arrow" width="12" height="12">
             <use href="./images/icons.svg#icon-button-arrow"></use>
