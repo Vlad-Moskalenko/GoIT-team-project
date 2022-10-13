@@ -18,7 +18,9 @@
 
   openMenuBtn.addEventListener('click', toggleMenu);
   closeMenuBtn.addEventListener('click', toggleMenu);
-  mobileNav.addEventListener('click', toggleMenu)
+  mobileNav.addEventListener('click', (e) => {
+    e.target.className === 'mobile-nav__link' ? toggleMenu() : null
+  })
 
   // Close the mobile menu on wider screens if the device orientation changes
   window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
