@@ -1,18 +1,27 @@
 (() => {
-  const refs = {
+  let refs = {
     openModalBtn: document.querySelectorAll('[data-modal-open]'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
     modal: document.querySelector('[data-modal]'),
-    backdrop: document.querySelector('.backdrop')
+    backdrop: document.querySelectorAll('.backdrop')
   };
 
   for (let el of refs.openModalBtn) {
-    el.addEventListener('click', toggleModal);
+    el.addEventListener('click', (e) => {
+      const currentModal = e.target.dataset.modalOpen;
+      refs.modal = document.querySelector(`[data-modal = ${currentModal}]`)
+      refs.closeModalBtn = refs.modal.querySelector('[data-modal-close]')
+      refs.closeModalBtn.addEventListener('click', toggleModal);
+
+      toggleModal()
+    });
   }
-  refs.closeModalBtn.addEventListener('click', toggleModal);
-  refs.backdrop.addEventListener('click', (e) => {
-    e.target === refs.backdrop? toggleModal() : null
-  });
+
+    for (let el of refs.backdrop) {
+      el.addEventListener('click', (e) => {
+        e.target.classList.contains('backdrop') ? toggleModal() : null;
+      })
+    }
 
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
