@@ -130,6 +130,10 @@
     transform: scale(120%);
     outline: none;
   }
+
+  &:hover {
+    transform: scaleX(120%);
+  }
 }
 .products__arrow {
   transition-property: transform;
@@ -138,13 +142,6 @@
   transform-origin: left center;
 
   pointer-events: none;
-
-  &:hover {
-    transform: scaleX(120%);
-  }
-  &:focus {
-    transform: scale(120%);
-  }
 }
 
 //  картинки на картці
