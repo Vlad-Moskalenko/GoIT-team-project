@@ -159,6 +159,10 @@
   // ДЕСКТОП
   @media screen and (min-width: $desktop-width) {
     font-size: 1.6rem;
+
+    &:not(:first-child) {
+        font-size: 1.4rem;
+      }
   }
 }
 
