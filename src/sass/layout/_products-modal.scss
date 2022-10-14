@@ -30,6 +30,71 @@
   }
 }
 
+.modal__image--coffee {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 131px;
+  height: 131px;
+  background: linear-gradient(0deg,
+      $ice-coffee-color,
+      $ice-coffee-color),
+    #d9d9d9;
+  border-radius: 50%;
+  margin-bottom: 25px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -7px;
+    width: 131px;
+    height: 131px;
+    background-image: url(../images/products/mob-ice-coffe-1x-min.png);
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0px 5.26027px 19.726px $ice-coffee-color;
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: url(../images/products/mob-ice-coffe-@2x-min.png);
+      background-size: contain;
+    }
+  }
+}
+
+.modal__image--milkshakes {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 131px;
+  height: 131px;
+  background: linear-gradient(0deg,
+      $milkshakes-color,
+      $milkshakes-color),
+    #d9d9d9;
+  border-radius: 50%;
+  margin-bottom: 25px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -7px;
+    width: 131px;
+    height: 131px;
+    background-image: url(../images/products/mob-milkshake-1x-min.png);
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0px 5.26027px 19.726px $milkshakes-color;
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: url(../images/products/mob-milkshake@2x-min.png);
+    }
+  }
+}
+
 .modal-products-list {
   display: flex;
   justify-content: center;
