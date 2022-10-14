@@ -4,15 +4,32 @@
 
   @media screen and (min-width: 768px) {
     padding-bottom: 82px;
+    background-image: url(../images/products/tab-backgr-1x-min.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/products/tab-backgr-@2x-min.png);
+    }
   }
+
 
   @media screen and (min-width: 1200px) {
     padding-bottom: 66px;
+    background-image: url(../images/products/deskt-backgr-1x-min.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+        background-image: url(../images/products/deskt-backgr@2x-min.png);
+    }
   }
 }
+
 .products__pre-title {
   margin-bottom: 12px;
 }
+
 .products__title {
   margin-bottom: 148px;
 
@@ -24,6 +41,7 @@
     margin-bottom: 303px;
   }
 }
+
 .products__list {
   display: flex;
   flex-direction: column;
@@ -39,6 +57,7 @@
     gap: 32px;
   }
 }
+
 .products__item {
   position: relative;
   display: flex;
@@ -92,6 +111,7 @@
     font-size: 1.6rem;
   }
 }
+
 .products__link {
   margin-top: auto;
   background-color: transparent;
@@ -100,25 +120,25 @@
   transition-duration: $transition-duration;
   transition-timing-function: $transition-timing-function;
   transform-origin: left center;
+  cursor: pointer;
 
   &:focus {
     transform: scale(120%);
     outline: none;
   }
+
+  &:hover {
+    transform: scaleX(120%);
+  }
 }
+
 .products__arrow {
   transition-property: transform;
   transition-duration: $transition-duration;
   transition-timing-function: $transition-timing-function;
   transform-origin: left center;
 
-  &:hover {
-    transform: scaleX(120%);
-    cursor: pointer;
-  }
-  &:focus {
-    transform: scale(120%);
-  }
+  pointer-events: none;
 }
 
 //  картинки на картці

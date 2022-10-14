@@ -1,0 +1,161 @@
+.modal__image {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 131px;
+  height: 131px;
+  background: linear-gradient(0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)),
+    #d9d9d9;
+  border-radius: 50%;
+  margin-bottom: 25px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -7px;
+    width: 131px;
+    height: 131px;
+    background-image: url(../images/products/modal-mob-icecr-1x-min.png);
+    border-radius: 50%;
+    box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: url(../images/products/modal-mob-icecr@2x-min.png);
+      background-size: contain;
+    }
+  }
+}
+
+.modal__image--coffee {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 131px;
+  height: 131px;
+  background: linear-gradient(0deg,
+      $ice-coffee-color,
+      $ice-coffee-color),
+    #d9d9d9;
+  border-radius: 50%;
+  margin-bottom: 25px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -7px;
+    width: 131px;
+    height: 131px;
+    background-image: url(../images/products/mob-ice-coffe-1x-min.png);
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0px 5.26027px 19.726px $ice-coffee-color;
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: url(../images/products/mob-ice-coffe-@2x-min.png);
+      background-size: contain;
+    }
+  }
+}
+
+.modal__image--milkshakes {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 131px;
+  height: 131px;
+  background: linear-gradient(0deg,
+      $milkshakes-color,
+      $milkshakes-color),
+    #d9d9d9;
+  border-radius: 50%;
+  margin-bottom: 25px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -7px;
+    width: 131px;
+    height: 131px;
+    background-image: url(../images/products/mob-milkshake-1x-min.png);
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0px 5.26027px 19.726px $milkshakes-color;
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: url(../images/products/mob-milkshake@2x-min.png);
+    }
+  }
+}
+
+.modal-products-list {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin-bottom: 39px;
+
+  @media screen and (min-width: 768px) {
+    gap: 20px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 1rem;
+    line-height: 1.2;
+    width: 53px;
+    min-height: 72px;
+    border: 2px solid #9cbe8f;
+    border-radius: 40px;
+    padding-bottom: 8px;
+  }
+}
+
+.modal-products-list__icons-text {
+  position: absolute;
+  top: -1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 43px;
+  height: 43px;
+  font-weight: 500;
+  line-height: 2.8;
+  background: #9cbe8f;
+  border-radius: 50%;
+  box-shadow: 0px 6px 20px 0px #0a881740;
+
+  @media screen and (min-width: 768px) {
+    box-shadow: 0px 6px 20px 0px #00000040;
+  }
+}
+
+.modal-products__content {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.modal-products-elements {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-bottom: 48px;
+}
+
+.modal-products-elements__item {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.9;
+}
