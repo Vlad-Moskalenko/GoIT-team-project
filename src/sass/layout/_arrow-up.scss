@@ -11,17 +11,18 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  border: 1px solid $default-text-color;
+  border: none;
+  opacity: 0.7;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   transform: scale(1);
   transition: color $transition-duration $transition-timing-function,
-    border-color $transition-duration $transition-timing-function,
-    transform $transition-duration $transition-timing-function;
+    transform $transition-duration $transition-timing-function,
+    opacity $transition-duration $transition-timing-function;
 
   &:hover {
-    border-color: $accent-color;
-    color: $accent-color;
+    color: $primary-color;
     transform: scale(1.1);
+    opacity: 1;
   }
 }
 
