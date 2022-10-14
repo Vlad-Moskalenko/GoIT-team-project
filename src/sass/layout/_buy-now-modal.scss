@@ -67,6 +67,13 @@
 
 .close-button__icon {
   fill: $default-text-color;
+
+  transition: transform $transition-duration $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    transform: rotate(360deg)
+  }
 }
 
 .modal__title {
