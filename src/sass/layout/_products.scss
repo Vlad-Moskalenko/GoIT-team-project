@@ -1,17 +1,6 @@
 .products {
-  background-color: #ffffff;
-  background-image: url(../images/products/backgr-mob-@1x.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   padding-top: 60px;
   padding-bottom: 60px;
-
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    background-image: url(../images/products/backgr-mob@2x.png);
-  }
 
   @media screen and (min-width: 768px) {
     padding-bottom: 82px;

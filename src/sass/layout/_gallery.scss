@@ -37,127 +37,29 @@
 }
 
 .gallery-reviews-wrapper {
-  background-color: #ffffff;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
-  min-height: 1070.26px;
+  min-height: 724.2px;
 
-  @media screen and (max-width: 320px) {
+  @media screen and (min-width: 320px) {
     background-image: linear-gradient(to bottom,
         $accent-color,
         $accent-color 24px,
-        transparent 24px),
-      url('../images/customer-reviews/mb-bg@1x.png');
-
-    @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-      background-image: linear-gradient(to bottom,
-          $accent-color,
-          $accent-color 24px,
-          transparent 24px),
-        url('../images/customer-reviews/mb-bg@2x.png');
-    }
+        transparent 24px);
   }
 
-  @media screen and (min-width: 321px) {
-    background-image: linear-gradient(to bottom,
-        $accent-color,
-        $accent-color 24px,
-        transparent 24px),
-      url('../images/customer-reviews/tb-bg@1x.png');
-    background-size: cover;
-
-    @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-      background-image: linear-gradient(to bottom,
-          $accent-color,
-          $accent-color 24px,
-          transparent 24px),
-        url('../images/customer-reviews/tb-bg@2x.png');
-    }
-  }
-
-  @media screen and (width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     background-image: linear-gradient(to bottom,
         $accent-color,
         $accent-color 164px,
-        transparent 164px),
-      url('../images/customer-reviews/tb-bg@1x.png');
-    background-size: contain;
-    min-height: 1122px;
-
-    @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-      background-image: linear-gradient(to bottom,
-          $accent-color,
-          $accent-color 164px,
-          transparent 164px),
-        url('../images/customer-reviews/tb-bg@2x.png');
-    }
+        transparent 164px);
+        min-height: 819px;
   }
 
-  @media screen and (min-width: ($tablet-width+1px)) {
-    background-image: linear-gradient(to bottom,
-        $accent-color,
-        $accent-color 164px,
-        transparent 164px),
-      url('../images/customer-reviews/dt-bg@1x.png');
-    background-size: cover;
-    min-height: 1122px;
-
-    @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-      background-image: linear-gradient(to bottom,
-          $accent-color,
-          $accent-color 164px,
-          transparent 164px),
-        url('../images/customer-reviews/dt-bg@2x.png');
-    }
-  }
-
-  @media screen and (width: $desktop-width) {
+  @media screen and (min-width: $desktop-width) {
     background-image: linear-gradient(to bottom,
         $accent-color,
         $accent-color 95px,
-        transparent 95px),
-      url('../images/customer-reviews/dt-bg@1x.png');
-    background-size: contain;
-    min-height: 1110px;
-
-    @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-      background-image: linear-gradient(to bottom,
-          $accent-color,
-          $accent-color 95px,
-          transparent 95px),
-        url('../images/customer-reviews/dt-bg@2x.png');
-    }
-  }
-
-  @media screen and (min-width: ($desktop-width+1px)) {
-    background-image: linear-gradient(to bottom,
-        $accent-color,
-        $accent-color 95px,
-        transparent 95px),
-      url('../images/customer-reviews/screen-bg@1x.png');
-    background-size: cover;
-    min-height: 1110px;
-
-    @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-      background-image: linear-gradient(to bottom,
-          $accent-color,
-          $accent-color 95px,
-          transparent 95px),
-        url('../images/customer-reviews/screen-bg@2x.png');
-    }
+        transparent 95px);
+        min-height: 1011px;
   }
 }
 
