@@ -1,34 +1,26 @@
 (() => {
+  let currentModal;
+
   let refs = {
     openModalBtn: document.querySelectorAll('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]'),
-    backdrop: document.querySelectorAll('.backdrop')
+    closeModalBtn: document.querySelectorAll('[data-modal-close]'),
+    backdrop: document.querySelectorAll('[data-modal-backdrop]')
   };
 
-  for (let el of refs.openModalBtn) {
-    el.addEventListener('click', (e) => {
-      const currentModal = e.target.dataset.modalOpen;
-      refs.modal = document.querySelector(`[data-modal = ${currentModal}]`)
-      refs.closeModalBtn = refs.modal.querySelector('[data-modal-close]')
-      refs.closeModalBtn.addEventListener('click', toggleModal);
-
+  for (let i = 0; i < refs.openModalBtn.length; i++) {
+    refs.openModalBtn[i].addEventListener('click', (e) => {
+      currentDataModal = e.target.dataset.modalOpen
+      currentModal = document.querySelector(`[data-modal = ${currentDataModal}]`)
       toggleModal()
     });
+
+    refs.closeModalBtn[i] ? refs.closeModalBtn[i].addEventListener('click', toggleModal) : null;
+    refs.backdrop[i] ? refs.backdrop[i].addEventListener('click', (e) => e.target.hasAttribute('data-modal-backdrop')? toggleModal() : null) : null;
   }
 
-    for (let el of refs.backdrop) {
-      el.addEventListener('click', (e) => {
-        e.target.classList.contains('backdrop') ? toggleModal() : null;
-      })
-    }
-
   function toggleModal() {
-    refs.modal.classList.toggle('is-hidden');
+    currentModal.classList.toggle('is-hidden');
 
-    const scrollLockMethod = !refs.modal.classList.contains('is-hidden')
-      ? 'disableBodyScroll'
-      : 'enableBodyScroll';
-    bodyScrollLock[scrollLockMethod](document.body);
+    !currentModal.classList.contains('is-hidden') ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'visible';
   }
 })();
