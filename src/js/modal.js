@@ -9,7 +9,7 @@
 
   for (let i = 0; i < refs.openModalBtn.length; i++) {
     refs.openModalBtn[i].addEventListener('click', (e) => {
-      currentDataModal = e.target.dataset.modalOpen
+      const currentDataModal = e.target.dataset.modalOpen
       currentModal = document.querySelector(`[data-modal = ${currentDataModal}]`)
       toggleModal()
     });
