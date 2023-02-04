@@ -4,7 +4,49 @@ html {
 }
 
 body {
-  background-color: $accent-color;
+  // background-color: $accent-color;
+  background-color: #ffffff;
+  background-image: url(../images/customer-reviews/mb-bg@1x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: url(../images/customer-reviews/mb-bg@2x.png);
+    }
+
+    @media screen and (min-width: 480px) {
+      background-image: url(../images/customer-reviews/tb-bg@1x.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../images/customer-reviews/tb-bg@2x.png);
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      background-image: url(../images/customer-reviews/dt-bg@1x.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+          background-image: url(../images/customer-reviews/dt-bg@2x.png);
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+      background-image: url(../images/customer-reviews/screen-bg@1x.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../images/customer-reviews/screen-bg@2x.png);
+      }
+    }
 }
 
 .container {
